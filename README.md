@@ -1,5 +1,23 @@
 All credits goto orignal BlackEye-Python code https://github.com/M4cs/BlackEye-Python
-The installation of this script is simple, open the terminal and run the below line.
+The installation of this script is simple, open the terminal and run the following commands.
+
+#Cloning the script
 ```
-wget https://raw.githubusercontent.com/amanverasia/BlackEye-Python/master/install.sh &&  bash install.sh
+git clone https://github.com/amanverasia/BlackEye-Python.git
+```
+
+#Opening the folder
+```
+cd BlackEye-Python
+```
+
+#Installation of requirements
+```
+pip install -r requirements.txt
+```
+
+If that doesn't work, try
+
+```
+pip3 install -r requirements.txt
 ```

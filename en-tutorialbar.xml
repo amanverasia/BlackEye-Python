@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="CrowdinId:4928">from multiprocessing.dummy import Pool</string>
+  <string name="CrowdinId:4930">from typing import List</string>
+  <string name="CrowdinId:4932">import requests</string>
+  <string name="CrowdinId:4934">from bs4 import BeautifulSoup</string>
+  <string name="CrowdinId:4936">class TutorialBarScraper:</string>
+  <string name="CrowdinId:4938">\"\"\"</string>
+  <string name="CrowdinId:4940">Contains any logic related to scraping of data from tutorialbar.com</string>
+  <string name="CrowdinId:4942">\"\"\"</string>
+  <string name="CrowdinId:4944">DOMAIN = \"https://www.tutorialbar.com\"</string>
+  <string name="CrowdinId:4946">def __init__(self):</string>
+  <string name="CrowdinId:4948">self.current_page = 0</string>
+  <string name="CrowdinId:4950">self.last_page = None</string>
+  <string name="CrowdinId:4952">self.links_per_page = 12</string>
+  <string name="CrowdinId:4954">def run(self, choice) -&gt; List:</string>
+  <string name="CrowdinId:4956">\"\"\"</string>
+  <string name="CrowdinId:4958">Runs the steps to scrape links from tutorialbar.com</string>
+  <string name="CrowdinId:4960">:return: list of udemy coupon links</string>
+  <string name="CrowdinId:4962">\"\"\"</string>
+  <string name="CrowdinId:4964">print(type(choice))</string>
+  <string name="CrowdinId:4966">print(choice)</string>
+  <string name="CrowdinId:4968">self.current_page += 1</string>
+  <string name="CrowdinId:4970">#print(\"Please Wait: Getting the course list from tutorialbar.com...\")</string>
+  <string name="CrowdinId:4972">if(choice==\'1\'):</string>
+  <string name="CrowdinId:4974">course_links = self.get_course_links(choice,</string>
+  <string name="CrowdinId:4976">f\"{self.DOMAIN}/category/it-software/page/{self.current_page}/\"</string>
+  <string name="CrowdinId:4978">)</string>
+  <string name="CrowdinId:4980">elif(choice==\'2\'):</string>
+  <string name="CrowdinId:4982">course_links = self.get_course_links(choice,</string>
+  <string name="CrowdinId:4984">f\"{self.DOMAIN}/category/development/page/{self.current_page}/\"</string>
+  <string name="CrowdinId:4986">)</string>
+  <string name="CrowdinId:4988">elif(choice==\'3\'):</string>
+  <string name="CrowdinId:4990">course_links = self.get_course_links(choice,</string>
+  <string name="CrowdinId:4992">f\"{self.DOMAIN}/category/finance-accounting/page/{self.current_page}/\"</string>
+  <string name="CrowdinId:4994">)</string>
+  <string name="CrowdinId:4996">elif(choice==\'4\'):</string>
+  <string name="CrowdinId:4998">course_links = self.get_course_links(choice,</string>
+  <string name="CrowdinId:5000">f\"{self.DOMAIN}/category/design/page/{self.current_page}/\"</string>
+  <string name="CrowdinId:5002">)</string>
+  <string name="CrowdinId:5004">elif(choice==\'5\'):</string>
+  <string name="CrowdinId:5006">course_links = self.get_course_links(choice,</string>
+  <string name="CrowdinId:5008">f\"{self.DOMAIN}/category/business/page/{self.current_page}/\"</string>
+  <string name="CrowdinId:5010">)</string>
+  <string name="CrowdinId:5012">elif(choice==\'6\'):</string>
+  <string name="CrowdinId:5014">course_links = self.get_course_links(choice,</string>
+  <string name="CrowdinId:5016">f\"{self.DOMAIN}/category/marketing/page/{self.current_page}/\"</string>
+  <string name="CrowdinId:5018">)</string>
+  <string name="CrowdinId:5020">elif(choice==\'7\'):</string>
+  <string name="CrowdinId:5022">course_links = self.get_course_links(choice,</string>
+  <string name="CrowdinId:5024">f\"{self.DOMAIN}/category/health-fitness/page/{self.current_page}/\"</string>
+  <string name="CrowdinId:5026">)</string>
+  <string name="CrowdinId:5028">elif(choice==\'8\'):</string>
+  <string name="CrowdinId:5030">course_links = self.get_course_links(choice,</string>
+  <string name="CrowdinId:5032">f\"{self.DOMAIN}/category/office-productivity/page/{self.current_page}/\"</string>
+  <string name="CrowdinId:5034">)</string>
+  <string name="CrowdinId:5036">elif(choice==\'9\'):</string>
+  <string name="CrowdinId:5038">course_links = self.get_course_links(choice,</string>
+  <string name="CrowdinId:5040">f\"{self.DOMAIN}/category/photography/page/{self.current_page}/\"</string>
+  <string name="CrowdinId:5042">)</string>
+  <string name="CrowdinId:5044">elif(choice==\'10\'):</string>
+  <string name="CrowdinId:5046">course_links = self.get_course_links(choice,</string>
+  <string name="CrowdinId:5048">f\"{self.DOMAIN}/category/personal-development/page/{self.current_page}/\"</string>
+  <string name="CrowdinId:5050">)</string>
+  <string name="CrowdinId:5052">elif(choice==\'11\'):</string>
+  <string name="CrowdinId:5054">course_links = self.get_course_links(choice,</string>
+  <string name="CrowdinId:5056">f\"{self.DOMAIN}/category/teaching-academics/page/{self.current_page}/\"</string>
+  <string name="CrowdinId:5058">)</string>
+  <string name="CrowdinId:5060">else:</string>
+  <string name="CrowdinId:5062">course_links = self.get_course_links(choice,</string>
+  <string name="CrowdinId:5064">f\"{self.DOMAIN}/all-courses/page/{self.current_page}/\"</string>
+  <string name="CrowdinId:5066">)</string>
+  <string name="CrowdinId:5068">print(f\"Page: {self.current_page} of {self.last_page} scraped\n\")</string>
+  <string name="CrowdinId:5070">udemy_links = self.gather_udemy_course_links(course_links)</string>
+  <string name="CrowdinId:5072"># for counter, course in enumerate(udemy_links):</string>
+  <string name="CrowdinId:5074"># 	print(f\"Received Link {counter + 1} : {course}\")</string>
+  <string name="CrowdinId:5076">#  print(\'\n\n\')</string>
+  <string name="CrowdinId:5078">#  print(f\'Links in list format: {udemy_links}\n\n\')</string>
+  <string name="CrowdinId:5080">return udemy_links</string>
+  <string name="CrowdinId:5082">def is_first_loop(self) -&gt; bool:</string>
+  <string name="CrowdinId:5084">\"\"\"</string>
+  <string name="CrowdinId:5086">Simple check to see if this is the first time we have executed</string>
+  <string name="CrowdinId:5088">:return: boolean showing if this is the first loop of the script</string>
+  <string name="CrowdinId:5090">\"\"\"</string>
+  <string name="CrowdinId:5092">return self.current_page == 1</string>
+  <string name="CrowdinId:5094">def get_course_links(self,choice, url: str) -&gt; List:</string>
+  <string name="CrowdinId:5096">\"\"\"</string>
+  <string name="CrowdinId:5098">Gets the url of pages which contain the udemy link we want to get</string>
+  <string name="CrowdinId:5100">:param str url: The url to scrape data from</string>
+  <string name="CrowdinId:5102">:return: list of pages on tutorialbar.com that contain Udemy coupons</string>
+  <string name="CrowdinId:5104">\"\"\"</string>
+  <string name="CrowdinId:5106">response = requests.get(url=url)</string>
+  <string name="CrowdinId:5108">soup = BeautifulSoup(response.content, \"html.parser\")</string>
+  <string name="CrowdinId:5110">if(choice==\'99\'):</string>
+  <string name="CrowdinId:5112">links = soup.find(\"div\", class_=\"rh-post-wrapper\").find_all(\"a\")</string>
+  <string name="CrowdinId:5114">else:</string>
+  <string name="CrowdinId:5116">links = soup.find(\"div\", class_=\"main-side clearfix\").find_all(\"a\")</string>
+  <string name="CrowdinId:5118">self.last_page = links[-2].text</string>
+  <string name="CrowdinId:5120">courses = []</string>
+  <string name="CrowdinId:5122">x = 0</string>
+  <string name="CrowdinId:5124">for _ in range(self.links_per_page):</string>
+  <string name="CrowdinId:5126">courses.append(links[x].get(\"href\"))</string>
+  <string name="CrowdinId:5128">x += 3</string>
+  <string name="CrowdinId:5130">return courses</string>
+  <string name="CrowdinId:5132">@staticmethod</string>
+  <string name="CrowdinId:5134">def get_udemy_course_link(url: str) -&gt; str:</string>
+  <string name="CrowdinId:5136">\"\"\"</string>
+  <string name="CrowdinId:5138">Gets the udemy course link</string>
+  <string name="CrowdinId:5140">:param str url: The url to scrape data from</string>
+  <string name="CrowdinId:5142">:return: Coupon link of the udemy course</string>
+  <string name="CrowdinId:5144">\"\"\"</string>
+  <string name="CrowdinId:5146">response = requests.get(url=url)</string>
+  <string name="CrowdinId:5148">soup = BeautifulSoup(response.content, \"html.parser\")</string>
+  <string name="CrowdinId:5150">udemy_link = soup.find(\"span\", class_=\"rh_button_wrapper\").find(\"a\").get(\"href\")</string>
+  <string name="CrowdinId:5152">return udemy_link</string>
+  <string name="CrowdinId:5154">def gather_udemy_course_links(self, courses: List[str]) -&gt; List:</string>
+  <string name="CrowdinId:5156">\"\"\"</string>
+  <string name="CrowdinId:5158">Threaded fetching of the udemy course links from tutorialbar.com</string>
+  <string name="CrowdinId:5160">:param list courses: A list of tutorialbar.com course links we want to fetch the udemy links for</string>
+  <string name="CrowdinId:5162">:return: list of udemy links</string>
+  <string name="CrowdinId:5164">\"\"\"</string>
+  <string name="CrowdinId:5166">thread_pool = Pool()</string>
+  <string name="CrowdinId:5168">results = thread_pool.map(self.get_udemy_course_link, courses)</string>
+  <string name="CrowdinId:5170">thread_pool.close()</string>
+  <string name="CrowdinId:5172">thread_pool.join()</string>
+  <string name="CrowdinId:5174">return results</string>
+</resources>

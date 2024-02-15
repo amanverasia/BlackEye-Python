@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="CrowdinId:4636">Security Policy</string>
+  <string name="CrowdinId:4638">Supported Versions</string>
+  <string name="CrowdinId:4640">All 0.x versions are supported.</string>
+  <string name="CrowdinId:4642">Master branch is also supported.</string>
+  <string name="CrowdinId:4644">Develop branch
+is unsupported.</string>
+  <string name="CrowdinId:4646">Version</string>
+  <string name="CrowdinId:4648">Supported</string>
+  <string name="CrowdinId:4650">0.x</string>
+  <string name="CrowdinId:4652">:white_check_mark:</string>
+  <string name="CrowdinId:4654">Master</string>
+  <string name="CrowdinId:4656">:white_check_mark:</string>
+  <string name="CrowdinId:4658">Develop</string>
+  <string name="CrowdinId:4660">:x:</string>
+  <string name="CrowdinId:4662">Reporting a Vulnerability</string>
+  <string name="CrowdinId:4664">If you do find a security vulnerability please contact
+[Aapatre](https://twitter.com/Antariksh_Patre) or
+[Nirjhor](https://twitter.com/Nirjhor) on twitter.</string>
+  <string name="CrowdinId:4666">Send a DM.</string>
+  <string name="CrowdinId:4668">If your reported vulnerability needs further action from your end we will
+contact you within 24 hours.</string>
+  <string name="CrowdinId:4670">If any further action is not needed, we will try to
+fix the issue and issue a release and notify you.</string>
+</resources>

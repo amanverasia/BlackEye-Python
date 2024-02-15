@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="CrowdinId:4636">Política de seguridad</string>
+  <string name="CrowdinId:4638">Versiones soportadas</string>
+  <string name="CrowdinId:4640">Todas las versiones 0.x son compatibles.</string>
+  <string name="CrowdinId:4642">La rama maestra también está soportada.</string>
+  <string name="CrowdinId:4644">La rama de desarrollo
+no es compatible.</string>
+  <string name="CrowdinId:4646">Versión</string>
+  <string name="CrowdinId:4648">Soportado</string>
+  <string name="CrowdinId:4650">0,x</string>
+  <string name="CrowdinId:4652">:white_check_mark:</string>
+  <string name="CrowdinId:4654">Maestro</string>
+  <string name="CrowdinId:4656">:white_check_mark:</string>
+  <string name="CrowdinId:4658">Desarrollar</string>
+  <string name="CrowdinId:4660">:x:</string>
+  <string name="CrowdinId:4662">Reportando una vulnerabilidad</string>
+  <string name="CrowdinId:4664">Si encuentras una vulnerabilidad de seguridad, ponte en contacto con
+[Aapatre](https://twitter.com/Antariksh_Patre) o
+[Nirjhor](https://twitter.com/Nirjhor) en twitter.</string>
+  <string name="CrowdinId:4666">Enviar un MD.</string>
+  <string name="CrowdinId:4668">If your reported vulnerability needs further action from your end we will
+contact you within 24 hours.</string>
+  <string name="CrowdinId:4670">If any further action is not needed, we will try to
+fix the issue and issue a release and notify you.</string>
+</resources>

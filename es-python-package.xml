@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="name">Construir CI</string>
+  <string name="on.workflow_dispatch"></string>
+  <string name="jobs.build.runs-on">ubuntu-última</string>
+  <string name="jobs.build.strategy.matrix.python-version.0">3.8</string>
+  <string name="jobs.build.steps.0.name">Configurando variables env</string>
+  <string name="jobs.build.steps.0.run">echo Configuración de variables env</string>
+  <string name="jobs.build.steps.0.env.UDEMY_EMAIL">${{ secrets.UDEMY_EMAIL }}</string>
+  <string name="jobs.build.steps.0.env.UDEMY_PASSWORD">${{ secrets.UDEMY_PASSWORD }}</string>
+  <string name="jobs.build.steps.1.uses">acciones/checkout@v2</string>
+  <string name="jobs.build.steps.2.name">Configurar Python ${{ matrix.python-version }}</string>
+  <string name="jobs.build.steps.2.uses">acciones/setup-python@v2</string>
+  <string name="jobs.build.steps.2.with.python-version">${{ matrix.python-version }}</string>
+  <string name="jobs.build.steps.3.name">Instalar dependencias</string>
+  <string name="jobs.build.steps.3.run">python -m pip install --upgrade pip
+pip install flake8 pytest
+if [ -f requirements.txt ]; then pip install -r requirements.txt; fi</string>
+  <string name="jobs.build.steps.4.name">Linta con flake8</string>
+  <string name="jobs.build.steps.4.run"># detiene la compilación si hay errores de sintaxis de Python o nombres indefinidos
+flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+# exit-zero trata todos los errores como advertencias. El editor de GitHub tiene 127 caracteres de ancho
+flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics</string>
+  <string name="jobs.build.steps.5.name">Instalar Chrome y Firefox</string>
+  <string name="jobs.build.steps.5.run">sudo apt instalar google-chrome-stable
+sudo apt-get install firefox</string>
+  <string name="jobs.build.steps.6.name">Asegúrate de que el crawler de cromo esté funcionando (Attempt para suscribirte a 1 curso)</string>
+  <string name="jobs.build.steps.6.run">python udemy_enroller_chrome.py</string>
+</resources>

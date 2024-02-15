@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="CrowdinId:52738">from selenium.webdriver.remote.webdriver import WebDriver</string>
+  <string name="CrowdinId:52740">from core import TutorialBarScraper</string>
+  <string name="CrowdinId:52742">links = []</string>
+  <string name="CrowdinId:52744">tb_scraper = TutorialBarScraper()</string>
+  <string name="CrowdinId:52746">print(\'1.</string>
+  <string name="CrowdinId:52748">IT software\')</string>
+  <string name="CrowdinId:52750">print(\'2.</string>
+  <string name="CrowdinId:52752">Development\')</string>
+  <string name="CrowdinId:52754">print(\'3.</string>
+  <string name="CrowdinId:52756">Finance Accounting\')</string>
+  <string name="CrowdinId:52758">print(\'4.</string>
+  <string name="CrowdinId:52760">Design\')</string>
+  <string name="CrowdinId:52762">print(\'5.</string>
+  <string name="CrowdinId:52764">Business\')</string>
+  <string name="CrowdinId:52766">print(\'6.</string>
+  <string name="CrowdinId:52768">Marketing\')</string>
+  <string name="CrowdinId:52770">print(\'7.</string>
+  <string name="CrowdinId:52772">Health and Fitness\')</string>
+  <string name="CrowdinId:52774">print(\'8.</string>
+  <string name="CrowdinId:52776">Office Productivity\')</string>
+  <string name="CrowdinId:52778">print(\'9.</string>
+  <string name="CrowdinId:52780">Photography\')</string>
+  <string name="CrowdinId:52782">print(\'10.</string>
+  <string name="CrowdinId:52784">Personal Development\')</string>
+  <string name="CrowdinId:52786">print(\'11.</string>
+  <string name="CrowdinId:52788">Teaching and Academics\')</string>
+  <string name="CrowdinId:52790">print(\'99.</string>
+  <string name="CrowdinId:52792">All Courses\')</string>
+  <string name="CrowdinId:52794">choice = input(\'Please select what category you want?</string>
+  <string name="CrowdinId:52796">:\')</string>
+  <string name="CrowdinId:52798">while True:</string>
+  <string name="CrowdinId:52800">udemy_course_links = tb_scraper.run(choice)</string>
+  <string name="CrowdinId:52802">links = links + udemy_course_links</string>
+  <string name="CrowdinId:52804">print(links)</string>
+  <string name="CrowdinId:52806">print(len(links))</string>
+</resources>

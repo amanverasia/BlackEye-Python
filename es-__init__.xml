@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="CrowdinId:4672">desde la configuración de importación de .settings</string>
+  <string name="CrowdinId:4674">desde .tutorialbar importar TutorialBarScraper</string>
+  <string name="CrowdinId:4676">desde .udemy importar Udemy Actions</string>
+</resources>

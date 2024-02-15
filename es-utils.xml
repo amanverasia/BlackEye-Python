@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="CrowdinId:5316">desde selenium.webdriver.remote.webdriver importar WebDriver</string>
+  <string name="CrowdinId:5318">desde la configuración principal de importación</string>
+  <string name="CrowdinId:5320">desde el núcleo importar TutorialBarScraper</string>
+  <string name="CrowdinId:5322">desde la importación principal de UdemyActions</string>
+  <string name="CrowdinId:5324">def redeem_courses(driver: WebDriver, ajustes: Ajustes,choice):</string>
+  <string name="CrowdinId:5326">\"\"\"</string>
+  <string name="CrowdinId:5328">Método para extraer cursos de tutorialbar.com y matricularse en ellos en udemy</string>
+  <string name="CrowdinId:5330">:return:</string>
+  <string name="CrowdinId:5332">\"\"\"</string>
+  <string name="CrowdinId:5334">tb_scraper = TutorialBarScraper()</string>
+  <string name="CrowdinId:5336">udemy_actions = UdemyActions(driver, settings)</string>
+  <string name="CrowdinId:5338">udemy_actions.login() # iniciar sesión una vez fuera mientras el bucle</string>
+  <string name="CrowdinId:5340">mientras verdadera:</string>
+  <string name="CrowdinId:5342">udemy_course_links = tb_scraper.run(elección)</string>
+  <string name="CrowdinId:5344">para curse_link en udemy_course_links:</string>
+  <string name="CrowdinId:5346">intentar:</string>
+  <string name="CrowdinId:5348">udemy_actions.redeem(course_link)</string>
+  <string name="CrowdinId:5350">if settings.is_ci_build:</string>
+  <string name="CrowdinId:5352">volver</string>
+  <string name="CrowdinId:5354">excepto KeyboardInterrupt:</string>
+  <string name="CrowdinId:5356">subir</string>
+  <string name="CrowdinId:5358">excepto excepción:</string>
+  <string name="CrowdinId:5360">if settings.is_ci_build:</string>
+  <string name="CrowdinId:5362">volver</string>
+  <string name="CrowdinId:5364">impresión(</string>
+  <string name="CrowdinId:5366">\"No se puede inscribir en este curso porque ya lo has reclamado o el navegador\"</string>
+  <string name="CrowdinId:5368">\"ventana ha sido cerrada!\")</string>
+  <string name="CrowdinId:5370">impresión(</string>
+  <string name="CrowdinId:5372">\"Pasando a la siguiente página de la lista de cursos en tutorialbar.com\")</string>
+</resources>

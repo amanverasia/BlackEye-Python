@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="CrowdinId:53280"># Install all the requirements by running requirements.py in IDLE or follow the alternate instructions at</string>
+  <string name="CrowdinId:53282"># https://github.com/aapatre/Automatic-Udemy-Course-Enroller-GET-PAID-UDEMY-COURSES-for-FREE/ Make sure you have</string>
+  <string name="CrowdinId:53284"># cleared all saved payment details on your Udemy account &amp; the browser!</string>
+  <string name="CrowdinId:53286">from selenium import webdriver</string>
+  <string name="CrowdinId:53288">from webdriver_manager.chrome import ChromeDriverManager</string>
+  <string name="CrowdinId:53290">from webdriver_manager.utils import ChromeType</string>
+  <string name="CrowdinId:53292">from core import Settings</string>
+  <string name="CrowdinId:53294">from core.utils import redeem_courses</string>
+  <string name="CrowdinId:53296">settings = Settings()</string>
+  <string name="CrowdinId:53298">driver = webdriver.Chrome(</string>
+  <string name="CrowdinId:53300">ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())</string>
+  <string name="CrowdinId:53302"># Maximizes the browser window since Udemy has a responsive design and the code only works</string>
+  <string name="CrowdinId:53304">driver.maximize_window()</string>
+  <string name="CrowdinId:53306"># in the maximized layout</string>
+  <string name="CrowdinId:53308">try:</string>
+  <string name="CrowdinId:53310">redeem_courses(driver, settings)</string>
+  <string name="CrowdinId:53312">except KeyboardInterrupt:</string>
+  <string name="CrowdinId:53314">print(\"Exiting the script\")</string>
+  <string name="CrowdinId:53316">except Exception as e:</string>
+  <string name="CrowdinId:53318">print(\"Error: {}\".format(e))</string>
+  <string name="CrowdinId:53320">finally:</string>
+  <string name="CrowdinId:53322">print(\"Closing browser\")</string>
+  <string name="CrowdinId:53324">driver.quit()</string>
+</resources>

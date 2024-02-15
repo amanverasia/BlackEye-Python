@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="exclude.0">.github/workflows/**/*</string>
+  <string name="changed_paths.maximum">1000</string>
+  <string name="changed_paths.outcome">error</string>
+  <string name="request_review">ninguno</string>
+  <string name="ignore_labels.0">ignorar-reposar</string>
+  <string name="restylers_version">estable</string>
+  <string name="commit_template">estilo(${restyler.name}): aplicar estilo de código</string>
+  <string name="restylers.0">negro</string>
+  <string name="restylers.1.isort.arguments.0">--perfil</string>
+  <string name="restylers.1.isort.arguments.1">negro</string>
+</resources>

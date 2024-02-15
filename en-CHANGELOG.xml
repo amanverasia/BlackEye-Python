@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="CrowdinId:3100">Changelog</string>
+  <string name="CrowdinId:3102">All notable changes to this project will be documented in this file.</string>
+  <string name="CrowdinId:3104">The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to
+[Semantic Versioning](https://semver.org/spec/v2.0.0.html).</string>
+  <string name="CrowdinId:3106">[0.2] - 2020-11-05</string>
+  <string name="CrowdinId:3108">Added</string>
+  <string name="CrowdinId:3110">Generate settings.yaml on first execution of script through cli prompts</string>
+  <string name="CrowdinId:3112">Add configuration to choose the languages you would like your free courses to
+  be in</string>
+  <string name="CrowdinId:3114">Started adding CI integrations</string>
+  <string name="CrowdinId:3116">Changed</string>
+  <string name="CrowdinId:3118">Close browser on script finish or user hitting ctrl-c</string>
+  <string name="CrowdinId:3120">Extracted core logic for tutorialbar and udemy to reduce duplication</string>
+  <string name="CrowdinId:3122">[0.1] - 2020-10-09</string>
+  <string name="CrowdinId:3124">Added</string>
+  <string name="CrowdinId:3126">This is our first pre release, marked as such because Firefox geckodriver
+  auto-installation is not working properly yet.</string>
+  <string name="CrowdinId:3128">You can use the download the
+  zip, extract, install the requirement and get a working version of this
+  project running locally.</string>
+  <string name="CrowdinId:3130">Suitable for users who are not looking forward to
+  contribute.</string>
+  <string name="CrowdinId:3132">https://github.com/aapatre/Automatic-Udemy-Course-Enroller-GET-PAID-UDEMY-COURSES-for-FREE/releases/tag/v0.2</string>
+  <string name="CrowdinId:3134">https://github.com/aapatre/Automatic-Udemy-Course-Enroller-GET-PAID-UDEMY-COURSES-for-FREE/releases/tag/v0.1</string>
+</resources>

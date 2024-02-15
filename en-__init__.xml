@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="CrowdinId:4672">from .settings import Settings</string>
+  <string name="CrowdinId:4674">from .tutorialbar import TutorialBarScraper</string>
+  <string name="CrowdinId:4676">from .udemy import UdemyActions</string>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="CrowdinId:3100">Cambios</string>
+  <string name="CrowdinId:3102">Todos los cambios notables en este proyecto serán documentados en este fichero.</string>
+  <string name="CrowdinId:3104">El formato está basado en [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+y este proyecto se adhiere a
+[Versión Semántica](https://semver.org/spec/v2.0.0.html).</string>
+  <string name="CrowdinId:3106">[0.2] - 2020-11-05</string>
+  <string name="CrowdinId:3108">Añadido</string>
+  <string name="CrowdinId:3110">Genera settings.yaml en la primera ejecución del script a través de peticiones de cli</string>
+  <string name="CrowdinId:3112">Add configuration to choose the languages you would like your free courses to
+  be in</string>
+  <string name="CrowdinId:3114">Comenzó añadiendo integraciones de CI</string>
+  <string name="CrowdinId:3116">Cambiado</string>
+  <string name="CrowdinId:3118">Cerrar navegador al terminar el script o al pulsar el usuario ctrl-c</string>
+  <string name="CrowdinId:3120">Extraído la lógica central para tutorialbar y udemy para reducir la duplicación</string>
+  <string name="CrowdinId:3122">[0.1] - 2020-10-09</string>
+  <string name="CrowdinId:3124">Añadido</string>
+  <string name="CrowdinId:3126">Esta es nuestra primera versión previa, marcada como tal porque la instalación automática de Firefox geckodriver
+  aún no funciona correctamente.</string>
+  <string name="CrowdinId:3128">Puede utilizar la descarga de
+  zip, extraer, instalar el requisito y obtener una versión funcional de este proyecto
+  funcionando localmente.</string>
+  <string name="CrowdinId:3130">Adecuado para usuarios que no esperan que
+  contribuya.</string>
+  <string name="CrowdinId:3132">https://github.com/aapatre/Automatic-Udemy-Course-Enroller-GET-PAID-UDEMY-COURSES-for-FREE/releases/tag/v0.2</string>
+  <string name="CrowdinId:3134">https://github.com/aapatre/Automatic-Udemy-Course-Enroller-GET-PAID-UDEMY-COURSES-for-FREE/releases/tag/v0.1</string>
+</resources>

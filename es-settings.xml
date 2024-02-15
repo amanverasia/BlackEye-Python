@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="CrowdinId:4678">importar getpass</string>
+  <string name="CrowdinId:4680">importar os.path</string>
+  <string name="CrowdinId:4682">desde distutils.util importar strtobool</string>
+  <string name="CrowdinId:4684">desde el escribir importar Dict</string>
+  <string name="CrowdinId:4686">desde la lista de importación</string>
+  <string name="CrowdinId:4688">desde el volcado de importación de ruamel.yaml</string>
+  <string name="CrowdinId:4690">desde ruamel.yaml importar YAML</string>
+  <string name="CrowdinId:4692">configuración de clase:</string>
+  <string name="CrowdinId:4694">\"\"\"</string>
+  <string name="CrowdinId:4696">Contiene toda la lógica relacionada con la configuración de scripts</string>
+  <string name="CrowdinId:4698">\"\"\"</string>
+  <string name="CrowdinId:4700">def __init__(self):</string>
+  <string name="CrowdinId:4702">self.email = Ninguno</string>
+  <string name="CrowdinId:4704">self.password = Ninguno</string>
+  <string name="CrowdinId:4706">self.zip_code = Ninguno</string>
+  <string name="CrowdinId:4708">self.languages = []</string>
+  <string name="CrowdinId:4710">self._settings_path = \"settings.yaml\"</string>
+  <string name="CrowdinId:4712">self.is_ci_build = strtobool(os.environ.get(\"CI\", \"False\"))</string>
+  <string name="CrowdinId:4714">self._init_settings()</string>
+  <string name="CrowdinId:4716">def _init_settings(self) -&gt; Ninguno:</string>
+  <string name="CrowdinId:4718">\"\"\"</string>
+  <string name="CrowdinId:4720">Inicializar la configuración a usar en el script</string>
+  <string name="CrowdinId:4722">:return:</string>
+  <string name="CrowdinId:4724">\"\"\"</string>
+  <string name="CrowdinId:4726">if self.is_ci_build:</string>
+  <string name="CrowdinId:4728">self._load_ci_settings()</string>
+  <string name="CrowdinId:4730">no:</string>
+  <string name="CrowdinId:4732">settings = self._load_user_settings()</string>
+  <string name="CrowdinId:4734">si la configuración no es ninguna:</string>
+  <string name="CrowdinId:4736">auto._generar_configuración()</string>
+  <string name="CrowdinId:4738">self._save_settings()</string>
+  <string name="CrowdinId:4740">def _load_ci_settings(self):</string>
+  <string name="CrowdinId:4742">\"\"\"</string>
+  <string name="CrowdinId:4744">Cargar variables de entorno para ejecutar CI</string>
+  <string name="CrowdinId:4746">:return:</string>
+  <string name="CrowdinId:4748">\"\"\"</string>
+  <string name="CrowdinId:4750">print(\"Cargando ajustes de IC\")</string>
+  <string name="CrowdinId:4752">self.email = os.environ[\"UDEMY_EMAIL\"]</string>
+  <string name="CrowdinId:4754">self.password = os.environ[\"UDEMY_PASSWORD\"]</string>
+  <string name="CrowdinId:4756">def _load_user_settings(self) -&gt; Dictar:</string>
+  <string name="CrowdinId:4758">\"\"\"</string>
+  <string name="CrowdinId:4760">Carga la configuración desde el archivo yaml si existe</string>
+  <string name="CrowdinId:4762">Diccionario :return: que contiene la configuración del script</string>
+  <string name="CrowdinId:4764">\"\"\"</string>
+  <string name="CrowdinId:4766">yaml = YAML()</string>
+  <string name="CrowdinId:4768">ajustes = Ninguno</string>
+  <string name="CrowdinId:4770">si os.path.isfile(self._settings_path):</string>
+  <string name="CrowdinId:4772">print(\"Cargando ajustes existentes\")</string>
+  <string name="CrowdinId:4774">con open(self._settings_path) como f:</string>
+  <string name="CrowdinId:4776">ajustes = yaml.load(f)</string>
+  <string name="CrowdinId:4778">udemy_settings = ajustes[\"udemy\"]</string>
+  <string name="CrowdinId:4780">self.email = configuración de udemy[\"email\"]</string>
+  <string name="CrowdinId:4782">self.password = configuración de udemy[\"contraseña\"]</string>
+  <string name="CrowdinId:4784">self.zip_code = udemy_settings.get(\"zipcode\")</string>
+  <string name="CrowdinId:4786">self.languages = udemy_settings.get(\"idiomas\")</string>
+  <string name="CrowdinId:4788">regresar ajustes</string>
+  <string name="CrowdinId:4790">def _generate_settings(self) -&gt; Ninguno:</string>
+  <string name="CrowdinId:4792">\"\"\"</string>
+  <string name="CrowdinId:4794">Generar la configuración del script</string>
+  <string name="CrowdinId:4796">:return:</string>
+  <string name="CrowdinId:4798">\"\"\"</string>
+  <string name="CrowdinId:4800">self.email = self._obtener_email()</string>
+  <string name="CrowdinId:4802">self.password = self._get_password()</string>
+  <string name="CrowdinId:4804">self.zip_code = self._get_zip_code()</string>
+  <string name="CrowdinId:4806">self.languages = self._get_languages()</string>
+  <string name="CrowdinId:4808">def _get_email(self) -&gt; str:</string>
+  <string name="CrowdinId:4810">\"\"\"</string>
+  <string name="CrowdinId:4812">Obtener entrada del usuario en el correo electrónico para usar para udemy</string>
+  <string name="CrowdinId:4814">:return: El correo udemy de los usuarios</string>
+  <string name="CrowdinId:4816">\"\"\"</string>
+  <string name="CrowdinId:4818">email = input(\"Por favor, introduce tu dirección de correo electrónico de udemy: \")</string>
+  <string name="CrowdinId:4820">if len(email) == 0:</string>
+  <string name="CrowdinId:4822">print(\"Debes proporcionar tu correo electrónico\")</string>
+  <string name="CrowdinId:4824">devolver self._get_email()</string>
+  <string name="CrowdinId:4826">correo de devolución</string>
+  <string name="CrowdinId:4828">def _get_password(self) -&gt; str:</string>
+  <string name="CrowdinId:4830">\"\"\"</string>
+  <string name="CrowdinId:4832">Obtener entrada del usuario en la contraseña para usar para udemy</string>
+  <string name="CrowdinId:4834">:return: La contraseña udemy de los usuarios</string>
+  <string name="CrowdinId:4836">\"\"\"</string>
+  <string name="CrowdinId:4838">password = getpass.getpass(prompt=\"Por favor, introduzca su contraseña de udemy: \")</string>
+  <string name="CrowdinId:4840">if len(contraseña) == 0:</string>
+  <string name="CrowdinId:4842">print(\"Debe proporcionar su contraseña\")</string>
+  <string name="CrowdinId:4844">devolver self._get_password()</string>
+  <string name="CrowdinId:4846">devolver contraseña</string>
+  <string name="CrowdinId:4848">@staticmethod</string>
+  <string name="CrowdinId:4850">def _get_zip_code() -&gt; str:</string>
+  <string name="CrowdinId:4852">\"\"\"</string>
+  <string name="CrowdinId:4854">Obtener entrada del usuario en el código postal para usar para udemy</string>
+  <string name="CrowdinId:4856">:return: El código postal de los usuarios</string>
+  <string name="CrowdinId:4858">\"\"\"</string>
+  <string name="CrowdinId:4860">zip_code = input(</string>
+  <string name="CrowdinId:4862">\"Por favor, introduzca su código postal (no necesario en algunas regiones): \")</string>
+  <string name="CrowdinId:4864">devolver código postal</string>
+  <string name="CrowdinId:4866">@staticmethod</string>
+  <string name="CrowdinId:4868">def _get_languages() -&gt; Lista:</string>
+  <string name="CrowdinId:4870">\"\"\"</string>
+  <string name="CrowdinId:4872">Obtén información del usuario sobre los idiomas en los que quiere obtener los cursos</string>
+  <string name="CrowdinId:4874">Lista :return: de idiomas en los que el usuario quiere canjear cursos de udemy</string>
+  <string name="CrowdinId:4876">\"\"\"</string>
+  <string name="CrowdinId:4878">idiomas = entrada(</string>
+  <string name="CrowdinId:4880">\"Por favor, introduzca sus preferencias de idioma (lista separada por comas por ejemplo, Inglés, Alemán): \"</string>
+  <string name="CrowdinId:4882">)</string>
+  <string name="CrowdinId:4884">return [lang.strip()</string>
+  <string name="CrowdinId:4886">for lang in languages.split(\",\")] if languages else []</string>
+  <string name="CrowdinId:4888">def _save_settings(self) -&gt; Ninguno:</string>
+  <string name="CrowdinId:4890">\"\"\"</string>
+  <string name="CrowdinId:4892">Confirmar si el usuario quiere guardar la configuración en el archivo</string>
+  <string name="CrowdinId:4894">:return:</string>
+  <string name="CrowdinId:4896">\"\"\"</string>
+  <string name="CrowdinId:4898">yaml_structure = dict()</string>
+  <string name="CrowdinId:4900">save_settings = entrada(</string>
+  <string name="CrowdinId:4902">\"Desea guardar la configuración para uso futuro (S/N): \")</string>
+  <string name="CrowdinId:4904">if save_settings.lower() == \"y\":</string>
+  <string name="CrowdinId:4906">yaml_structure[\"udemy\"] = {</string>
+  <string name="CrowdinId:4908">\"email\": str(self.email),</string>
+  <string name="CrowdinId:4910">\"contraseña\": str(self.password),</string>
+  <string name="CrowdinId:4912">\"zipcode\": str(self.zip_code),</string>
+  <string name="CrowdinId:4914">\"languages\": self.languages,</string>
+  <string name="CrowdinId:4916">}</string>
+  <string name="CrowdinId:4918">con open(self._settings_path, \"w+\") como f:</string>
+  <string name="CrowdinId:4920">dump(yaml_structure, stream=f)</string>
+  <string name="CrowdinId:4922">imprime(f\"Guardado tus ajustes en {self._settings_path}\")</string>
+  <string name="CrowdinId:4924">no:</string>
+  <string name="CrowdinId:4926">print(\"No se guardan los ajustes como se solicita\")</string>
+</resources>

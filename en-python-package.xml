@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="name">CI Build</string>
+  <string name="on.workflow_dispatch"></string>
+  <string name="jobs.build.runs-on">ubuntu-latest</string>
+  <string name="jobs.build.strategy.matrix.python-version.0">3.8</string>
+  <string name="jobs.build.steps.0.name">Setting env variables</string>
+  <string name="jobs.build.steps.0.run">echo Setting env varibles</string>
+  <string name="jobs.build.steps.0.env.UDEMY_EMAIL">${{ secrets.UDEMY_EMAIL }}</string>
+  <string name="jobs.build.steps.0.env.UDEMY_PASSWORD">${{ secrets.UDEMY_PASSWORD }}</string>
+  <string name="jobs.build.steps.1.uses">actions/checkout@v2</string>
+  <string name="jobs.build.steps.2.name">Set up Python ${{ matrix.python-version }}</string>
+  <string name="jobs.build.steps.2.uses">actions/setup-python@v2</string>
+  <string name="jobs.build.steps.2.with.python-version">${{ matrix.python-version }}</string>
+  <string name="jobs.build.steps.3.name">Install dependencies</string>
+  <string name="jobs.build.steps.3.run">python -m pip install --upgrade pip
+pip install flake8 pytest
+if [ -f requirements.txt ]; then pip install -r requirements.txt; fi</string>
+  <string name="jobs.build.steps.4.name">Lint with flake8</string>
+  <string name="jobs.build.steps.4.run"># stop the build if there are Python syntax errors or undefined names
+flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+# exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics</string>
+  <string name="jobs.build.steps.5.name">Install Chrome and Firefox</string>
+  <string name="jobs.build.steps.5.run">sudo apt install google-chrome-stable
+sudo apt-get install firefox</string>
+  <string name="jobs.build.steps.6.name">Make sure chrome crawler is working (Attempt to subscribe to 1 course)</string>
+  <string name="jobs.build.steps.6.run">python udemy_enroller_chrome.py</string>
+</resources>

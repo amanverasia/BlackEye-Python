@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="CrowdinId:52738">desde selenium.webdriver.remote.webdriver importar WebDriver</string>
+  <string name="CrowdinId:52740">desde el núcleo importar TutorialBarScraper</string>
+  <string name="CrowdinId:52742">enlaces = []</string>
+  <string name="CrowdinId:52744">tb_scraper = TutorialBarScraper()</string>
+  <string name="CrowdinId:52746">print(\'1.</string>
+  <string name="CrowdinId:52748">Software IT\')</string>
+  <string name="CrowdinId:52750">print(\'2.</string>
+  <string name="CrowdinId:52752">Desarrollo\')</string>
+  <string name="CrowdinId:52754">print(\'3.</string>
+  <string name="CrowdinId:52756">Contabilidad financiera\')</string>
+  <string name="CrowdinId:52758">print(\'4.</string>
+  <string name="CrowdinId:52760">Diseño)</string>
+  <string name="CrowdinId:52762">print(\'5.</string>
+  <string name="CrowdinId:52764">Negocios)</string>
+  <string name="CrowdinId:52766">print(\'6.</string>
+  <string name="CrowdinId:52768">Marketing\')</string>
+  <string name="CrowdinId:52770">print(\'7.</string>
+  <string name="CrowdinId:52772">Salud y Fitness \')</string>
+  <string name="CrowdinId:52774">print(\'8.</string>
+  <string name="CrowdinId:52776">Productividad de oficina\')</string>
+  <string name="CrowdinId:52778">print(\'9.</string>
+  <string name="CrowdinId:52780">Fotografía\')</string>
+  <string name="CrowdinId:52782">print(\'10.</string>
+  <string name="CrowdinId:52784">Desarrollo personal\')</string>
+  <string name="CrowdinId:52786">print(\'11.</string>
+  <string name="CrowdinId:52788">Enseñanza y académicos\')</string>
+  <string name="CrowdinId:52790">print(\'99.</string>
+  <string name="CrowdinId:52792">Todos los cursos\')</string>
+  <string name="CrowdinId:52794">choice = input(\'Por favor seleccione qué categoría quiere?</string>
+  <string name="CrowdinId:52796">:\')</string>
+  <string name="CrowdinId:52798">mientras verdadera:</string>
+  <string name="CrowdinId:52800">udemy_course_links = tb_scraper.run(elección)</string>
+  <string name="CrowdinId:52802">enlaces = enlaces + enlaces udemy_course_links</string>
+  <string name="CrowdinId:52804">impresión(enlaces)</string>
+  <string name="CrowdinId:52806">print(len(links))</string>
+</resources>

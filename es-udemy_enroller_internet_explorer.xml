@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="CrowdinId:53414"># Instalar todos los requisitos ejecutando requirements.py en IDLE o seguir las instrucciones alternativas en</string>
+  <string name="CrowdinId:53416"># https://github.com/aapatre/Automatic-Udemy-Course-Enroller-GET-PAID-UDEMY-COURSES-for-FREE/ Asegúrese de que tiene</string>
+  <string name="CrowdinId:53418"># ¡Se han borrado todos los detalles de pago guardados en tu cuenta de Udemy y el navegador!</string>
+  <string name="CrowdinId:53420">desde selenium importar webdriver</string>
+  <string name="CrowdinId:53422">desde webdriver_manager.microsoft importar IEDriverManager</string>
+  <string name="CrowdinId:53424">from core import Settings</string>
+  <string name="CrowdinId:53426">desde core.utils importar redeem_courses</string>
+  <string name="CrowdinId:53428">settings = Settings()</string>
+  <string name="CrowdinId:53430">driver = webdriver.Ie(IEDriverManager().install())</string>
+  <string name="CrowdinId:53432"># Maximiza la ventana del navegador ya que Udemy tiene un diseño receptivo y el código sólo funciona</string>
+  <string name="CrowdinId:53434">driver.maximize_window()</string>
+  <string name="CrowdinId:53436"># en el diseño maximizado</string>
+  <string name="CrowdinId:53438">intentar:</string>
+  <string name="CrowdinId:53440">redeem_courses(driver, settings)</string>
+  <string name="CrowdinId:53442">excepto KeyboardInterrupt:</string>
+  <string name="CrowdinId:53444">print(\"Salir del script\")</string>
+  <string name="CrowdinId:53446">excepto excepción como:</string>
+  <string name="CrowdinId:53448">print(\"Error: {}\".format(e))</string>
+  <string name="CrowdinId:53450">finalmente:</string>
+  <string name="CrowdinId:53452">print(\"Cerrando navegador\")</string>
+  <string name="CrowdinId:53454">driver.quit()</string>
+</resources>

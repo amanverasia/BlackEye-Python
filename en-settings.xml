@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="CrowdinId:4678">import getpass</string>
+  <string name="CrowdinId:4680">import os.path</string>
+  <string name="CrowdinId:4682">from distutils.util import strtobool</string>
+  <string name="CrowdinId:4684">from typing import Dict</string>
+  <string name="CrowdinId:4686">from typing import List</string>
+  <string name="CrowdinId:4688">from ruamel.yaml import dump</string>
+  <string name="CrowdinId:4690">from ruamel.yaml import YAML</string>
+  <string name="CrowdinId:4692">class Settings:</string>
+  <string name="CrowdinId:4694">\"\"\"</string>
+  <string name="CrowdinId:4696">Contains all logic related to the scripts settings</string>
+  <string name="CrowdinId:4698">\"\"\"</string>
+  <string name="CrowdinId:4700">def __init__(self):</string>
+  <string name="CrowdinId:4702">self.email = None</string>
+  <string name="CrowdinId:4704">self.password = None</string>
+  <string name="CrowdinId:4706">self.zip_code = None</string>
+  <string name="CrowdinId:4708">self.languages = []</string>
+  <string name="CrowdinId:4710">self._settings_path = \"settings.yaml\"</string>
+  <string name="CrowdinId:4712">self.is_ci_build = strtobool(os.environ.get(\"CI\", \"False\"))</string>
+  <string name="CrowdinId:4714">self._init_settings()</string>
+  <string name="CrowdinId:4716">def _init_settings(self) -&gt; None:</string>
+  <string name="CrowdinId:4718">\"\"\"</string>
+  <string name="CrowdinId:4720">Initialize the settings to be used in the script</string>
+  <string name="CrowdinId:4722">:return:</string>
+  <string name="CrowdinId:4724">\"\"\"</string>
+  <string name="CrowdinId:4726">if self.is_ci_build:</string>
+  <string name="CrowdinId:4728">self._load_ci_settings()</string>
+  <string name="CrowdinId:4730">else:</string>
+  <string name="CrowdinId:4732">settings = self._load_user_settings()</string>
+  <string name="CrowdinId:4734">if settings is None:</string>
+  <string name="CrowdinId:4736">self._generate_settings()</string>
+  <string name="CrowdinId:4738">self._save_settings()</string>
+  <string name="CrowdinId:4740">def _load_ci_settings(self):</string>
+  <string name="CrowdinId:4742">\"\"\"</string>
+  <string name="CrowdinId:4744">Load environment variables for CI run</string>
+  <string name="CrowdinId:4746">:return:</string>
+  <string name="CrowdinId:4748">\"\"\"</string>
+  <string name="CrowdinId:4750">print(\"Loading CI settings\")</string>
+  <string name="CrowdinId:4752">self.email = os.environ[\"UDEMY_EMAIL\"]</string>
+  <string name="CrowdinId:4754">self.password = os.environ[\"UDEMY_PASSWORD\"]</string>
+  <string name="CrowdinId:4756">def _load_user_settings(self) -&gt; Dict:</string>
+  <string name="CrowdinId:4758">\"\"\"</string>
+  <string name="CrowdinId:4760">Loads the settings from the yaml file if it exists</string>
+  <string name="CrowdinId:4762">:return: dictionary containing the script settings</string>
+  <string name="CrowdinId:4764">\"\"\"</string>
+  <string name="CrowdinId:4766">yaml = YAML()</string>
+  <string name="CrowdinId:4768">settings = None</string>
+  <string name="CrowdinId:4770">if os.path.isfile(self._settings_path):</string>
+  <string name="CrowdinId:4772">print(\"Loading existing settings\")</string>
+  <string name="CrowdinId:4774">with open(self._settings_path) as f:</string>
+  <string name="CrowdinId:4776">settings = yaml.load(f)</string>
+  <string name="CrowdinId:4778">udemy_settings = settings[\"udemy\"]</string>
+  <string name="CrowdinId:4780">self.email = udemy_settings[\"email\"]</string>
+  <string name="CrowdinId:4782">self.password = udemy_settings[\"password\"]</string>
+  <string name="CrowdinId:4784">self.zip_code = udemy_settings.get(\"zipcode\")</string>
+  <string name="CrowdinId:4786">self.languages = udemy_settings.get(\"languages\")</string>
+  <string name="CrowdinId:4788">return settings</string>
+  <string name="CrowdinId:4790">def _generate_settings(self) -&gt; None:</string>
+  <string name="CrowdinId:4792">\"\"\"</string>
+  <string name="CrowdinId:4794">Generate the settings for the script</string>
+  <string name="CrowdinId:4796">:return:</string>
+  <string name="CrowdinId:4798">\"\"\"</string>
+  <string name="CrowdinId:4800">self.email = self._get_email()</string>
+  <string name="CrowdinId:4802">self.password = self._get_password()</string>
+  <string name="CrowdinId:4804">self.zip_code = self._get_zip_code()</string>
+  <string name="CrowdinId:4806">self.languages = self._get_languages()</string>
+  <string name="CrowdinId:4808">def _get_email(self) -&gt; str:</string>
+  <string name="CrowdinId:4810">\"\"\"</string>
+  <string name="CrowdinId:4812">Get input from user on the email to use for udemy</string>
+  <string name="CrowdinId:4814">:return: The users udemy email</string>
+  <string name="CrowdinId:4816">\"\"\"</string>
+  <string name="CrowdinId:4818">email = input(\"Please enter your udemy email address: \")</string>
+  <string name="CrowdinId:4820">if len(email) == 0:</string>
+  <string name="CrowdinId:4822">print(\"You must provide your email\")</string>
+  <string name="CrowdinId:4824">return self._get_email()</string>
+  <string name="CrowdinId:4826">return email</string>
+  <string name="CrowdinId:4828">def _get_password(self) -&gt; str:</string>
+  <string name="CrowdinId:4830">\"\"\"</string>
+  <string name="CrowdinId:4832">Get input from user on the password to use for udemy</string>
+  <string name="CrowdinId:4834">:return: The users udemy password</string>
+  <string name="CrowdinId:4836">\"\"\"</string>
+  <string name="CrowdinId:4838">password = getpass.getpass(prompt=\"Please enter your udemy password: \")</string>
+  <string name="CrowdinId:4840">if len(password) == 0:</string>
+  <string name="CrowdinId:4842">print(\"You must provide your password\")</string>
+  <string name="CrowdinId:4844">return self._get_password()</string>
+  <string name="CrowdinId:4846">return password</string>
+  <string name="CrowdinId:4848">@staticmethod</string>
+  <string name="CrowdinId:4850">def _get_zip_code() -&gt; str:</string>
+  <string name="CrowdinId:4852">\"\"\"</string>
+  <string name="CrowdinId:4854">Get input from user on the zip code to use for udemy</string>
+  <string name="CrowdinId:4856">:return: The users udemy zip code</string>
+  <string name="CrowdinId:4858">\"\"\"</string>
+  <string name="CrowdinId:4860">zip_code = input(</string>
+  <string name="CrowdinId:4862">\"Please enter your zipcode (Not necessary in some regions): \")</string>
+  <string name="CrowdinId:4864">return zip_code</string>
+  <string name="CrowdinId:4866">@staticmethod</string>
+  <string name="CrowdinId:4868">def _get_languages() -&gt; List:</string>
+  <string name="CrowdinId:4870">\"\"\"</string>
+  <string name="CrowdinId:4872">Get input from user on the languages they want to get courses in</string>
+  <string name="CrowdinId:4874">:return: list of languages the user wants to redeem udemy courses in</string>
+  <string name="CrowdinId:4876">\"\"\"</string>
+  <string name="CrowdinId:4878">languages = input(</string>
+  <string name="CrowdinId:4880">\"Please enter your language preferences (comma separated list e.g. English,German): \"</string>
+  <string name="CrowdinId:4882">)</string>
+  <string name="CrowdinId:4884">return [lang.strip()</string>
+  <string name="CrowdinId:4886">for lang in languages.split(\",\")] if languages else []</string>
+  <string name="CrowdinId:4888">def _save_settings(self) -&gt; None:</string>
+  <string name="CrowdinId:4890">\"\"\"</string>
+  <string name="CrowdinId:4892">Confirm if the user wants to save settings to file</string>
+  <string name="CrowdinId:4894">:return:</string>
+  <string name="CrowdinId:4896">\"\"\"</string>
+  <string name="CrowdinId:4898">yaml_structure = dict()</string>
+  <string name="CrowdinId:4900">save_settings = input(</string>
+  <string name="CrowdinId:4902">\"Do you want to save settings for future use (Y/N): \")</string>
+  <string name="CrowdinId:4904">if save_settings.lower() == \"y\":</string>
+  <string name="CrowdinId:4906">yaml_structure[\"udemy\"] = {</string>
+  <string name="CrowdinId:4908">\"email\": str(self.email),</string>
+  <string name="CrowdinId:4910">\"password\": str(self.password),</string>
+  <string name="CrowdinId:4912">\"zipcode\": str(self.zip_code),</string>
+  <string name="CrowdinId:4914">\"languages\": self.languages,</string>
+  <string name="CrowdinId:4916">}</string>
+  <string name="CrowdinId:4918">with open(self._settings_path, \"w+\") as f:</string>
+  <string name="CrowdinId:4920">dump(yaml_structure, stream=f)</string>
+  <string name="CrowdinId:4922">print(f\"Saved your settings in {self._settings_path}\")</string>
+  <string name="CrowdinId:4924">else:</string>
+  <string name="CrowdinId:4926">print(\"Not saving your settings as requested\")</string>
+</resources>

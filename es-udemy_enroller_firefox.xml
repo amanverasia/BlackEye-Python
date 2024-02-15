@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="CrowdinId:53368"># Instalar todos los requisitos ejecutando requirements.py en IDLE o seguir las instrucciones alternativas en</string>
+  <string name="CrowdinId:53370"># https://github.com/aapatre/Automatic-Udemy-Course-Enroller-GET-PAID-UDEMY-COURSES-for-FREE/ Asegúrese de que tiene</string>
+  <string name="CrowdinId:53372"># ¡Se han borrado todos los detalles de pago guardados en tu cuenta de Udemy y el navegador!</string>
+  <string name="CrowdinId:53374">Para firefox necesita instalar manualmente el</string>
+  <string name="CrowdinId:53376"># controlador en Arch Linux (sudo pacman -S geckodriver).</string>
+  <string name="CrowdinId:53378">No probado en otras plataformas.</string>
+  <string name="CrowdinId:53380">desde selenium importar webdriver</string>
+  <string name="CrowdinId:53382">desde la configuración principal de importación</string>
+  <string name="CrowdinId:53384">desde core.utils importar redeem_courses</string>
+  <string name="CrowdinId:53386">settings = Settings()</string>
+  <string name="CrowdinId:53388">driver = webdriver.Firefox()</string>
+  <string name="CrowdinId:53390"># Maximiza la ventana del navegador ya que Udemy tiene un diseño receptivo y el código sólo funciona</string>
+  <string name="CrowdinId:53392">driver.maximize_window()</string>
+  <string name="CrowdinId:53394"># en el diseño maximizado</string>
+  <string name="CrowdinId:53396">intentar:</string>
+  <string name="CrowdinId:53398">redeem_courses(driver, settings)</string>
+  <string name="CrowdinId:53400">excepto KeyboardInterrupt:</string>
+  <string name="CrowdinId:53402">print(\"Salir del script\")</string>
+  <string name="CrowdinId:53404">excepto excepción como:</string>
+  <string name="CrowdinId:53406">print(\"Error: {}\".format(e))</string>
+  <string name="CrowdinId:53408">finalmente:</string>
+  <string name="CrowdinId:53410">print(\"Cerrando navegador\")</string>
+  <string name="CrowdinId:53412">driver.quit()</string>
+</resources>

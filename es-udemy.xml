@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="CrowdinId:5176">importar tiempo</string>
+  <string name="CrowdinId:5178">desde selenium.common.exceptions importar NoSuchElementException</string>
+  <string name="CrowdinId:5180">desde selenium.webdriver.common.by importar Por</string>
+  <string name="CrowdinId:5182">de selenium.webdriver.support importar expected_conditions como CE</string>
+  <string name="CrowdinId:5184">desde selenium.webdriver.support.ui importar WebDriverWait</string>
+  <string name="CrowdinId:5186">clases UdemyActions:</string>
+  <string name="CrowdinId:5188">\"\"\"</string>
+  <string name="CrowdinId:5190">Contiene cualquier lógica relacionada con la interacción con el sitio web de udemy</string>
+  <string name="CrowdinId:5192">\"\"\"</string>
+  <string name="CrowdinId:5194">DOMAIN = \"https://www.udemy.com\"</string>
+  <string name="CrowdinId:5196">def __init__(autor, driver, ajustes):</string>
+  <string name="CrowdinId:5198">self.driver = driver</string>
+  <string name="CrowdinId:5200">self.settings = ajustes</string>
+  <string name="CrowdinId:5202">self.logged_in = False</string>
+  <string name="CrowdinId:5204">def login(self) -&gt; Ninguno:</string>
+  <string name="CrowdinId:5206">\"\"\"</string>
+  <string name="CrowdinId:5208">Inicia sesión en tu cuenta de udemy</string>
+  <string name="CrowdinId:5210">:return: None</string>
+  <string name="CrowdinId:5212">\"\"\"</string>
+  <string name="CrowdinId:5214">si no self.logged_in:</string>
+  <string name="CrowdinId:5216">self.driver.get(f\"{self.DOMAIN}/join/login-popup/\")</string>
+  <string name="CrowdinId:5218">email_element = self.driver.find_element_by_name(\"email\")</string>
+  <string name="CrowdinId:5220">email_element.send_keys(self.settings.email)</string>
+  <string name="CrowdinId:5222">password_element = self.driver.find_element_by_name(\"contraseña\")</string>
+  <string name="CrowdinId:5224">contraseña_element.send_keys(self.settings.password)</string>
+  <string name="CrowdinId:5226">self.driver.find_element_by_name(\"Enviado\").click()</string>
+  <string name="CrowdinId:5228">self.logged_in = Verdadero</string>
+  <string name="CrowdinId:5230">def redem(self, url: str) -&gt; Ninguno:</string>
+  <string name="CrowdinId:5232">\"\"\"</string>
+  <string name="CrowdinId:5234">Canjea la url del curso pasada en</string>
+  <string name="CrowdinId:5236">:param str url: URL del curso a canjear</string>
+  <string name="CrowdinId:5238">:return: None</string>
+  <string name="CrowdinId:5240">\"\"\"</string>
+  <string name="CrowdinId:5242">self.driver.get(url)</string>
+  <string name="CrowdinId:5244">print(\"Intentando inscribirse: \" + self.driver.title)</string>
+  <string name="CrowdinId:5246"># Si el usuario ha configurado los idiomas, compruebe que es una opción soportada</string>
+  <string name="CrowdinId:5248">if self.settings.languages:</string>
+  <string name="CrowdinId:5250">locale_xpath = \"//div[@data-purpose=\'lead-course-locale\']\"</string>
+  <string name="CrowdinId:5252">element_text = (WebDriverWait(self.driver, 10).until(</string>
+  <string name="CrowdinId:5254">EC.presence_of_element_located((por.XPATH, locale_xpath))).text)</string>
+  <string name="CrowdinId:5256">si element_text no está en self.settings.languages:</string>
+  <string name="CrowdinId:5258">print(\"Idioma del curso no deseado: {}\".format(element_text))</string>
+  <string name="CrowdinId:5260">volver</string>
+  <string name="CrowdinId:5262"># Inscribirse ahora 1</string>
+  <string name="CrowdinId:5264">buy_course_button_xpath = \"//button[@data-purpose=\'buy-this-course-button\']\"</string>
+  <string name="CrowdinId:5266">element_present = EC.presence_of_element_located(</string>
+  <string name="CrowdinId:5268">(Por.XPATH, buy_course_button_xpath))</string>
+  <string name="CrowdinId:5270">WebDriverWait(self.driver, 10).until(element_present).click()</string>
+  <string name="CrowdinId:5272">enroll_button_xpath = \"//*[@class=\'udemy pageloaded\']/div[1]/div[2]/div/div/div/div[2]/form/div[2]/div/div[4]/button\"</string>
+  <string name="CrowdinId:5274"># Inscribirse ahora 2</string>
+  <string name="CrowdinId:5276">element_present = EC.presence_of_element_located((</string>
+  <string name="CrowdinId:5278">Por.XPATH,</string>
+  <string name="CrowdinId:5280">enroll_button_xpath,</string>
+  <string name="CrowdinId:5282">))</string>
+  <string name="CrowdinId:5284">WebDriverWait(self.driver, 10).until(element_present)</string>
+  <string name="CrowdinId:5286"># Comprueba si el código postal existe antes de hacer esto</string>
+  <string name="CrowdinId:5288">si self.settings.zip_code:</string>
+  <string name="CrowdinId:5290"># Supongamos que a veces zip no es necesario porque el script fue originalmente empujado sin esto</string>
+  <string name="CrowdinId:5292">intentar:</string>
+  <string name="CrowdinId:5294">zipcode_element = self.driver.find_element_by_id(</string>
+  <string name="CrowdinId:5296">\"dirección de billingSegundoEntrada\")</string>
+  <string name="CrowdinId:5298">código zipcode_element.send_keys(self.settings.zip_code)</string>
+  <string name="CrowdinId:5300"># Después de poner el código postal, la página se actualiza y desactiva el botón de inscripción para una división</string>
+  <string name="CrowdinId:5302"># segundo.</string>
+  <string name="CrowdinId:5304">time.sleep(1)</string>
+  <string name="CrowdinId:5306">excepto NochElementException:</string>
+  <string name="CrowdinId:5308">pasar</string>
+  <string name="CrowdinId:5310">udemy_enroll_element_2 = self.driver.find_element_por_xpath(</string>
+  <string name="CrowdinId:5312">enroll_button_xpath) # Udemy</string>
+  <string name="CrowdinId:5314">udemy_enroll_element_2.click()</string>
+</resources>

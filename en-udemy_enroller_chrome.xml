@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="CrowdinId:53156"># Install all the requirements by running requirements.py in IDLE or follow the alternate instructions at</string>
+  <string name="CrowdinId:53158">from selenium import webdriver</string>
+  <string name="CrowdinId:53160">from webdriver_manager.chrome import ChromeDriverManager</string>
+  <string name="CrowdinId:53162">from core import Settings</string>
+  <string name="CrowdinId:53164">from core.utils import redeem_courses</string>
+  <string name="CrowdinId:53166">settings = Settings()</string>
+  <string name="CrowdinId:53168">print(\'1.</string>
+  <string name="CrowdinId:53170">IT software\')</string>
+  <string name="CrowdinId:53172">print(\'2.</string>
+  <string name="CrowdinId:53174">Development\')</string>
+  <string name="CrowdinId:53176">print(\'3.</string>
+  <string name="CrowdinId:53178">Finance Accounting\')</string>
+  <string name="CrowdinId:53180">print(\'4.</string>
+  <string name="CrowdinId:53182">Design\')</string>
+  <string name="CrowdinId:53184">print(\'5.</string>
+  <string name="CrowdinId:53186">Business\')</string>
+  <string name="CrowdinId:53188">print(\'6.</string>
+  <string name="CrowdinId:53190">Marketing\')</string>
+  <string name="CrowdinId:53192">print(\'7.</string>
+  <string name="CrowdinId:53194">Health and Fitness\')</string>
+  <string name="CrowdinId:53196">print(\'8.</string>
+  <string name="CrowdinId:53198">Office Productivity\')</string>
+  <string name="CrowdinId:53200">print(\'9.</string>
+  <string name="CrowdinId:53202">Photography\')</string>
+  <string name="CrowdinId:53204">print(\'10.</string>
+  <string name="CrowdinId:53206">Personal Development\')</string>
+  <string name="CrowdinId:53208">print(\'11.</string>
+  <string name="CrowdinId:53210">Teaching and Academics\')</string>
+  <string name="CrowdinId:53212">print(\'99.</string>
+  <string name="CrowdinId:53214">All Courses\')</string>
+  <string name="CrowdinId:53216">choice = input(\'Please select what category you want?</string>
+  <string name="CrowdinId:53218">:\')</string>
+  <string name="CrowdinId:53220">chrome_options = None</string>
+  <string name="CrowdinId:53222">if settings.is_ci_build:</string>
+  <string name="CrowdinId:53224">from selenium.webdriver.chrome.options import Options</string>
+  <string name="CrowdinId:53226"># Having the user-agent with Headless param was always leading to robot check</string>
+  <string name="CrowdinId:53228">user_agent = (</string>
+  <string name="CrowdinId:53230">\"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 \"</string>
+  <string name="CrowdinId:53232">\"Safari/537.36\")</string>
+  <string name="CrowdinId:53234">chrome_options = Options()</string>
+  <string name="CrowdinId:53236"># We need to run headless when using github CI</string>
+  <string name="CrowdinId:53238">chrome_options.add_argument(\"--headless\")</string>
+  <string name="CrowdinId:53240">chrome_options.add_argument(\"user-agent={0}\".format(user_agent))</string>
+  <string name="CrowdinId:53242">chrome_options.add_argument(\"--window-size=1325x744\")</string>
+  <string name="CrowdinId:53244">print(\"This is a CI run\")</string>
+  <string name="CrowdinId:53246">driver = webdriver.Chrome(ChromeDriverManager().install(),</string>
+  <string name="CrowdinId:53248">options=chrome_options)</string>
+  <string name="CrowdinId:53250"># Maximizes the browser window since Udemy has a responsive design and the code only works</string>
+  <string name="CrowdinId:53252">driver.maximize_window()</string>
+  <string name="CrowdinId:53254"># in the maximized layout</string>
+  <string name="CrowdinId:53256">try:</string>
+  <string name="CrowdinId:53258">redeem_courses(driver, settings, choice)</string>
+  <string name="CrowdinId:53260">if settings.is_ci_build:</string>
+  <string name="CrowdinId:53262">print(\"We have attempted to subscribe to 1 udemy course\")</string>
+  <string name="CrowdinId:53264">print(\"Ending test\")</string>
+  <string name="CrowdinId:53266">except KeyboardInterrupt:</string>
+  <string name="CrowdinId:53268">print(\"Exiting the script\")</string>
+  <string name="CrowdinId:53270">except Exception as e:</string>
+  <string name="CrowdinId:53272">print(\"Error: {}\".format(e))</string>
+  <string name="CrowdinId:53274">finally:</string>
+  <string name="CrowdinId:53276">print(\"Closing browser\")</string>
+  <string name="CrowdinId:53278">driver.quit()</string>
+</resources>

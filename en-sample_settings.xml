@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="udemy.email">Example@gmail.com</string>
+  <string name="udemy.password">ExamplePa$$w0rd</string>
+  <string name="udemy.zipcode">12345</string>
+</resources>

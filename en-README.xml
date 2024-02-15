@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="CrowdinId:4434">Automatic Udemy Course Enroller: GET PAID COURSES for FREE!</string>
+  <string name="CrowdinId:4436">(Legally!)</string>
+  <string name="CrowdinId:4438">The code scrapes course links and coupons from
+[tutorialbar.com](https://tutorialbar.com)</string>
+  <string name="CrowdinId:4440">**_Disclaimer &amp; WARNINGS:_**</string>
+  <string name="CrowdinId:4442">**IMPORTANT:** Make sure you **clear all saved Debit/Credit Card or any other
+   saved payment info from your Browser &amp; your Udemy account** before using the
+   script!</string>
+  <string name="CrowdinId:4444">**Use** this ONLY for **Educational Purposes!** By using this code you agree
+   that **I\'m not responsible for any kind of trouble** caused by the code.</string>
+  <string name="CrowdinId:4446">**Make sure web-scraping is legal in your region.**</string>
+  <string name="CrowdinId:4448">This is **NOT a hacking script**, i.e., it can\'t enroll you for a specific
+   course!</string>
+  <string name="CrowdinId:4450">Instead it finds courses that provide coupon links to make the
+   transaction free and then LEGALLY enroll you to the course!</string>
+  <string name="CrowdinId:4452">Requirements:</string>
+  <string name="CrowdinId:4454">How to Install the Requirements?</string>
+  <string name="CrowdinId:4456">**Required Python version:** [Python 3.8+](https://www.python.org/downloads/)</string>
+  <string name="CrowdinId:4458">**You must have pip installed.</string>
+  <string name="CrowdinId:4460">Please look up how to install pip in your OS.**</string>
+  <string name="CrowdinId:4462">Download a release of this project or clone the repository then navigate to the
+folder where you placed the files on.</string>
+  <string name="CrowdinId:4464">Type `pip install -r requirements.txt` to
+get all the requirements installed in one go.</string>
+  <string name="CrowdinId:4466">**Webdrivers are now automatically installed!</string>
+  <string name="CrowdinId:4468">But here are some links in case
+  you are using the vanilla script or the Safari Browser:**</string>
+  <string name="CrowdinId:4470">Edge- https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/</string>
+  <string name="CrowdinId:4472">Chrome- https://chromedriver.chromium.org/</string>
+  <string name="CrowdinId:4474">Firefox- https://github.com/mozilla/geckodriver/releases/</string>
+  <string name="CrowdinId:4476">Safari-
+https://developer.apple.com/documentation/webkit/about_webdriver_for_safari/</string>
+  <string name="CrowdinId:4478">Opera- https://github.com/operasoftware/operachromiumdriver/releases</string>
+  <string name="CrowdinId:4480">Internet Explorer-
+[Find it on your own accord](https://www.selenium.dev/downloads/)</string>
+  <string name="CrowdinId:4482">**Note:** Make sure that the driver version matches your browser.</string>
+  <string name="CrowdinId:4484">Instructions</string>
+  <string name="CrowdinId:4486">1 .</string>
+  <string name="CrowdinId:4488">Make sure to install all the requirements above.</string>
+  <string name="CrowdinId:4490">Run the script and the cli will guide you through the settings required</string>
+  <string name="CrowdinId:4492">Otherwise you can rename the following file
+[sample_settings.yaml](sample_settings.yaml) to **settings.py** and edit it
+  using a text editor and insert your **Udemy registered email in the email
+  section**, your **Udemy password in the password section**, and the **ZIP Code
+  in the zipcode section (if you reside in the United States or any other region
+  where Udemy asks for ZIP Code as Billing Info, else enter a random number)**.</string>
+  <string name="CrowdinId:4494">2 .</string>
+  <string name="CrowdinId:4496">Choose the appropriate file for your browser (from the list below):</string>
+  <string name="CrowdinId:4498">**Tested and works perfectly:**</string>
+  <string name="CrowdinId:4500">Chrome:
+[udemy_enroller_chrome.py](https://github.com/aapatre/Automatic-Udemy-Course-Enroller-GET-PAID-UDEMY-COURSES-for-FREE/blob/master/udemy_enroller_chrome.py)</string>
+  <string name="CrowdinId:4502">Chromium:
+[udemy_enroller_chromium.py](https://github.com/aapatre/Automatic-Udemy-Course-Enroller-GET-PAID-UDEMY-COURSES-for-FREE/blob/master/udemy_enroller_chromium.py)</string>
+  <string name="CrowdinId:4504">Edge:
+[udemy_enroller_edge.py](https://github.com/aapatre/Automatic-Udemy-Course-Enroller-GET-PAID-UDEMY-COURSES-for-FREE/blob/master/udemy_enroller_edge.py)</string>
+  <string name="CrowdinId:4506">**Has issues:**</string>
+  <string name="CrowdinId:4508">Firefox:
+[udemy_enroller_firefox.py(requires manual driver installation)](https://github.com/aapatre/Automatic-Udemy-Course-Enroller-GET-PAID-UDEMY-COURSES-for-FREE/blob/master/udemy_enroller_firefox.py)</string>
+  <string name="CrowdinId:4510">**Untested:**</string>
+  <string name="CrowdinId:4512">Opera:
+[udemy_enroller_opera.py](https://github.com/aapatre/Automatic-Udemy-Course-Enroller-GET-PAID-UDEMY-COURSES-for-FREE/blob/master/udemy_enroller_opera.py)</string>
+  <string name="CrowdinId:4514">**Experimentation or other Browsers (especially Safari):**</string>
+  <string name="CrowdinId:4516">[aka the old bot- requires manual driver setup](https://github.com/aapatre/Automatic-Udemy-Course-Enroller-GET-PAID-UDEMY-COURSES-for-FREE/blob/master/udemy_enroller_vanilla.py)</string>
+  <string name="CrowdinId:4518">**Use at your own risk:**</string>
+  <string name="CrowdinId:4520">Vanilla</string>
+  <string name="CrowdinId:4522">Internet Explorer:
+[udemy_enroller_internet_explorer.py](https://github.com/aapatre/Automatic-Udemy-Course-Enroller-GET-PAID-UDEMY-COURSES-for-FREE/blob/master/udemy_enroller_internet_explorer.py)</string>
+  <string name="CrowdinId:4524">3 .</string>
+  <string name="CrowdinId:4526">Run the chosen script in terminal like so:
+`python udemy_enroller_firefox.py`</string>
+  <string name="CrowdinId:4528">4 .</string>
+  <string name="CrowdinId:4530">The bot starts scraping the course links from the first **All Courses** page
+on [Tutorial Bar](https://www.tutorialbar.com/all-courses/page/1) and starts
+enrolling you to Udemy courses.</string>
+  <string name="CrowdinId:4532">After it has enrolled you to courses from the
+first page, it then moves to the next Tutorial Bar page and the cycle continues.</string>
+  <string name="CrowdinId:4534">Stop the script by pressing ctrl+c in terminal to stop the enrollment process.</string>
+  <string name="CrowdinId:4536">FAQs</string>
+  <string name="CrowdinId:4538">1.</string>
+  <string name="CrowdinId:4540">Can I get a specific course for free with this script?</string>
+  <string name="CrowdinId:4542">Unfortunately no, but let me assure you that you may be lucky enough to get a
+particular course for free when the instructor posts it\'s coupon code in order
+to promote it.</string>
+  <string name="CrowdinId:4544">Also, over time you would build a library of courses by running
+the script often and have all the required courses in your collection.</string>
+  <string name="CrowdinId:4546">In fact,
+I made this course after completing a
+[Python automation course](https://www.udemy.com/course/automate/) and selenium,
+which of course I got for free!</string>
+  <string name="CrowdinId:4548">:)</string>
+  <string name="CrowdinId:4550">2.</string>
+  <string name="CrowdinId:4552">How does the bot work?</string>
+  <string name="CrowdinId:4554">The bot retrieves coupon links from Tutorial Bar\'s list to cut the prices and
+then uses Selenium\'s Browser automation features to login and enroll to the
+courses.</string>
+  <string name="CrowdinId:4556">Think of it this way: Epic Games &amp; other clients like Steam provide you
+a handful of games each week, for free; Only in this case, we need a coupon code
+to make those courses free.</string>
+  <string name="CrowdinId:4558">3.</string>
+  <string name="CrowdinId:4560">How frequently should you run the script?</string>
+  <string name="CrowdinId:4562">Daily, at least once!</string>
+  <string name="CrowdinId:4564">If you are using it for the first time, I recommend that
+you allow it to scrape through all pages on Tutorial Bar (might take a few hours
+since there are &gt;500 pages on the site).</string>
+  <string name="CrowdinId:4566">I\'ve painstakingly amassed over 4000
+courses in the last four years!</string>
+  <string name="CrowdinId:4568">And out of those 4000, I\'ve only paid for 4 of
+these courses.</string>
+  <string name="CrowdinId:4570">So, a mere **0.001%** of courses are **actually paid** in my collection!</string>
+  <string name="CrowdinId:4572">Thankfully, you can get more than what I gathered in 4 years, in a matter of
+weeks!</string>
+  <string name="CrowdinId:4574">🙌🏻</string>
+  <string name="CrowdinId:4576">4.</string>
+  <string name="CrowdinId:4578">Why did I create this?</string>
+  <string name="CrowdinId:4580">It used to be my daily habit to redeem courses and it was an extremely tedious
+task that took around 15 minutes, for 10 courses.</string>
+  <string name="CrowdinId:4582">And then I suddenly got the
+idea to automate it, after I found the automation course mentioned above.</string>
+  <string name="CrowdinId:4584">I bet,
+it will save your precious time too!</string>
+  <string name="CrowdinId:4586">:)</string>
+  <string name="CrowdinId:4588">5.</string>
+  <string name="CrowdinId:4590">Udemy has detected that I\'m using automation tools to browse the website!</string>
+  <string name="CrowdinId:4592">What should I do?</string>
+  <string name="CrowdinId:4594">![](https://i.imgur.com/pwseilE.jpg) Relax!</string>
+  <string name="CrowdinId:4596">This happens when you run the script
+several times in a short interval of time.</string>
+  <string name="CrowdinId:4598">Solve the captcha, close the browser,
+and simply re-run the script.</string>
+  <string name="CrowdinId:4600">Easy peasy lemon squeezy!</string>
+  <string name="CrowdinId:4602">🍋🙃 <br></br><br></br></string>
+  <string name="CrowdinId:4604">6.</string>
+  <string name="CrowdinId:4606">The code compiles successfully but it\'s taking too long to work!</string>
+  <string name="CrowdinId:4608">IS there any way to fix that?</string>
+  <string name="CrowdinId:4610">Since we are heavily dependent on a third-party site to retrieve coupons links,
+there may be issues when the site is down.</string>
+  <string name="CrowdinId:4612">Needless to mention the connectivity
+issues too.</string>
+  <string name="CrowdinId:4614">If everything is working fine, you can see the courses being
+retrieved in the Python console/shell, which may take a while.</string>
+  <string name="CrowdinId:4616">7.</string>
+  <string name="CrowdinId:4618">Which is the best way to run the script?</string>
+  <string name="CrowdinId:4620">It is recommended to run the script using Python\'s IDLE IDE.</string>
+  <string name="CrowdinId:4622">**Pro-tip:** Create a batch file, to launch the script instantly, using these
+instructions: https://datatofish.com/batch-python-script/</string>
+  <string name="CrowdinId:4624">8.</string>
+  <string name="CrowdinId:4626">Which branch to commit against?</string>
+  <string name="CrowdinId:4628">Pull request should be made on \"develop\" branch.</string>
+  <string name="CrowdinId:4630">9.</string>
+  <string name="CrowdinId:4632">What\'s the roadmap?</string>
+  <string name="CrowdinId:4634">Take a look at our
+[Roadmap here](https://github.com/aapatre/Automatic-Udemy-Course-Enroller-GET-PAID-UDEMY-COURSES-for-FREE/projects/1)
+and help us on what you want or talk to us about your proposed changes.</string>
+</resources>
